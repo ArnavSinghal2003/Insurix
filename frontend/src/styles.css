@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+/* --- Global Design System Variables --- */
+:root {
+  --primary-color: #0d1b2a;
+  --secondary-color: #fefae0;
+  --bg-light: #ffffff;
+  --text-dark: #222;
+  --text-medium: #444;
+  --text-light: #666;
+  --shadow-subtle: 0 4px 12px rgba(40, 54, 24, 0.08);
+  --shadow-hover: 0 8px 20px rgba(40, 54, 24, 0.15);
+  --border-color: rgba(40, 54, 24, 0.1);
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Base Styles --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  background-color: #f7f7f7;
+}
+
+/* Apply this to a main layout wrapper or potentially globally (least recommended) */
+body,
+html {
+  overflow-x: hidden; /* Prevents horizontal scrolling on the entire page */
+  width: 100%;       /* Ensures width is based on the viewport */
+}

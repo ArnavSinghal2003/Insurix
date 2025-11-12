@@ -1,0 +1,16 @@
+<div class="card-container">
+  <app-navbar></app-navbar>
+  <app-carousel></app-carousel>
+
+  <div class="cards-grid">
+    <div class="card-wrapper" *ngFor="let policy of policies" (click)="goToCategory(policy.policyName)">
+      <app-card
+        [imagePath]="policy.imagePath || ''"
+        [policyName]="policy.policyName"
+        >
+      </app-card>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

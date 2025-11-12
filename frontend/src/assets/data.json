@@ -1,0 +1,116 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Alice",
+      "fullName": "Alice Johnson",
+      "email": "alice@example.com",
+      "password": "abcd",
+      "role": "user"
+    },
+    {
+      "id": "2",
+      "name": "Bob",
+      "fullName": "Bob Smith",
+      "email": "bob@example.com",
+      "password": "def",
+      "role": "admin"
+    },
+    {
+      "id": "3",
+      "name": "Charlie",
+      "fullName": "Charlie Brown",
+      "email": "charlie@example.com",
+      "password": "xyz123",
+      "role": "user"
+    },
+    {
+      "id": "4",
+      "name": "Diana",
+      "fullName": "Diana Prince",
+      "email": "diana@example.com",
+      "password": "pass456",
+      "role": "user"
+    },
+    {
+      "id": "5",
+      "name": "Ethan",
+      "fullName": "Ethan Hunt",
+      "email": "ethan@example.com",
+      "password": "secure789",
+      "role": "admin"
+    },
+    {
+      "id": "6",
+      "name": "Fiona",
+      "fullName": "Fiona Gallagher",
+      "email": "fiona@example.com",
+      "password": "hello321",
+      "role": "user"
+    },
+    {
+      "id": "7",
+      "name": "George",
+      "fullName": "George Miller",
+      "email": "george@example.com",
+      "password": "mypassword",
+      "role": "user"
+    },
+    {
+      "id": "07a5",
+      "email": "swastika@google.dev",
+      "fullName": "Swastika Shukhla",
+      "password": "eatsure123",
+      "role": "user"
+    },
+    {
+      "id": "3274",
+      "email": "arnav@cts.in",
+      "fullName": "Arnav Singhal",
+      "password": "arnav123",
+      "role": "user"
+    },
+    {
+      "id": "ea9e",
+      "email": "bhalu@bhalu.com",
+      "fullName": "Aditya Chouhan ",
+      "password": "vitkapookie",
+      "role": "user"
+    },
+    {
+      "id": "1ab5",
+      "email": "soumya@uber.dev",
+      "fullName": "Soumya Joshi",
+      "password": "nancy123",
+      "role": "user"
+    },
+    {
+      "id": "32c6",
+      "email": "shrivallimam@cog.com",
+      "fullName": "Shrivalli Maheshwaran",
+      "password": "mafia123",
+      "role": "admin"
+    },
+    {
+      "id": "b7cc",
+      "email": "krutik@krutik.com",
+      "fullName": "Krutik Sharma",
+      "password": "yube123@",
+      "role": "admin"
+    },
+    {
+      "id": "f411",
+      "email": "nancy@google.dev",
+      "fullName": "Nancy Saini",
+      "password": "duckcreek123@",
+      "role": "user"
+    },
+    {
+      "id": "28b8",
+      "email": "dev@doshi.com",
+      "fullName": "Dev Doshi",
+      "password": "Deepthi123#",
+      "role": "user"
+    }
+  ]
+}

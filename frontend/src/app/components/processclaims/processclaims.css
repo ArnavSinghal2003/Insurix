@@ -1,0 +1,58 @@
+/* --- Color Variables from Original Admin Theme (for reference) --- */
+:root {
+  --primary-color: #0d1b2a; /* Dark Blue */
+  --text-dark: #333333;
+  --bg-page: #f8f9fa;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Page Container and Header --- */
+.claims-dashboard-container {
+  padding: 3rem 2rem;
+  background-color: var(--bg-page);
+  min-height: calc(100vh - 80px); /* Fill remaining viewport space */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* --- Status/Feedback Messages --- */
+.status-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  padding: 2rem;
+  background-color: var(--bg-light); /* Assuming white background */
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.status-message.loading-state {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* --- Claims Grid Layout (Crucial for UI improvement) --- */
+.claims-grid {
+  display: grid;
+  /* Columns: 1 column on mobile, 2 columns on tablet/desktop */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  max-width: 1400px; /* Limit max width for better readability */
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+/* Ensure individual claim card component styles fit well within the grid */
+app-claim-card {
+  display: block; /* Ensures the component respects grid layout */
+  /* Claim Card Component should have its own background/shadow for visual separation */
+}

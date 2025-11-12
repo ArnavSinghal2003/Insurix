@@ -1,0 +1,15 @@
+<app-navbar></app-navbar> 
+<div class="category-container"> <div class="category-header"> 
+  <h2 class="category-title">Available Policies</h2> 
+  <p class="category-subheading">Find the perfect plan for you and your loved ones. Explore our diverse range of policies designed to meet your every need.</p> 
+</div>
+<app-policy-card
+  *ngFor="let policy of filteredPolicies"
+  [_id]="policy._id"
+  [title]="policy.title"
+  [description]="policy.description"
+  [claimAmount]="policy.claimAmount"
+  [monthlyPremium]="policy.monthlyPremium"
+  [image]="policy.image"
+  [category]="policy.category"
+></app-policy-card>

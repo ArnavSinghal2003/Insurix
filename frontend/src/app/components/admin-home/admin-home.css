@@ -1,0 +1,6 @@
+.admin-home-content {
+  padding: 2rem;
+  text-align: center;
+  font-family: var(--font-family);
+  color: var(--text-dark);
+}

@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+
+<h2 class="claims-title">My Claim History</h2>
+
+<div class="claims-container">
+  <ng-container *ngIf="requests.length > 0; else noClaims">
+    <app-claimed
+      *ngFor="let request of requests"
+      [policy]="request.policy"
+      [claimStatus]="request.claimStatus"
+      [requestedAt]="request.requestedAt"
+      [note]="request.note"
+    ></app-claimed>
+  </ng-container>
+</div>
+
+<ng-template #noClaims>
+  <p class="no-claims-text">You have not submitted any claim requests yet.</p>
+</ng-template>

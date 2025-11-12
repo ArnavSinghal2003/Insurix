@@ -1,0 +1,12 @@
+<!-- policy-checkout-card.html -->
+<div class="checkout-card">
+  <img [src]="imageUrl" alt="{{ policyName }}" class="checkout-image" />
+  <h2>{{ policyName }}</h2>
+  <p>{{ policyDetails }}</p>
+  <p>Claim Amount: ₹{{ claimAmount }}</p>
+  <p>Monthly Premium: ₹{{ monthlyPremium }}</p>
+  <div class="checkout-actions">
+    <button>Get Policy Document</button>
+    <button>Connect to an Agent</button>
+  </div>
+</div>

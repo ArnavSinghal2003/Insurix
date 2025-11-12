@@ -1,0 +1,21 @@
+<div class="claims-dashboard-container">
+  
+  <h2>Process Claims</h2>
+
+  <div class="status-message loading-state" *ngIf="loading">
+    <p>⏳ Loading claim requests... Please wait.</p>
+  </div>
+
+  <div class="status-message" *ngIf="!loading && requests.length === 0">
+    <p> No pending claim requests. All claims are processed!</p>
+  </div>
+
+  <div class="claims-grid" *ngIf="!loading && requests.length > 0">
+    <app-claim-card 
+      *ngFor="let request of requests"
+      [request]="request"
+      (onAction)="handleClaimAction($event)">
+    </app-claim-card>
+  </div>
+
+</div>

@@ -1,0 +1,147 @@
+/* --- Color Variables (Original Color Theme) --- */
+:root {
+  --primary-color: #0d1b2a; /* Dark Blue */
+  --accent-color: #1b2a41; /* Slightly lighter Dark Blue for hover/action */
+  --text-dark: #333333;
+  --bg-light: #ffffff;
+  --border-light: rgba(0, 0, 0, 0.1);
+  --error-color: #dc3545; /* Red for errors */
+  --success-color: #28a745; /* Green for success */
+}
+
+/* --- Form Container (Structure remains) --- */
+.policy-form-container {
+  max-width: 650px; 
+  margin: 3rem auto;
+  padding: 2.5rem;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  background-color: var(--bg-light);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); 
+}
+
+.policy-form-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color); /* Dark Blue heading */
+  font-size: 1.8rem;
+}
+
+/* --- Form Layout and Grouping (Structure remains) --- */
+form {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 1.25rem;
+}
+
+@media (min-width: 500px) {
+  form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .form-group, 
+  textarea,
+  button,
+  .success-message,
+  input[type="file"] {
+    grid-column: 1 / -1; 
+  }
+  input[type="number"] {
+    grid-column: span 1;
+  }
+}
+
+.form-group {
+  margin-bottom: 0;
+  position: relative;
+}
+
+/* --- Inputs, Textarea, Select (Focus color reverted) --- */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 1rem 0.75rem;
+  border: 2px solid var(--border-light);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary-color); /* Dark Blue focus */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 27, 42, 0.1); /* Dark Blue glow */
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input[type="file"] {
+  padding: 1rem 0.75rem; 
+  border: 2px dashed var(--border-light);
+  cursor: pointer;
+  background-color: #fafafa;
+}
+
+/* --- Submit Button (Color reverted) --- */
+button[type="submit"] {
+  padding: 1rem 1.5rem;
+  background-color: var(--primary-color); /* Dark Blue background */
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(13, 27, 42, 0.2);
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  background-color: var(--accent-color); /* Lighter Dark Blue hover */
+  box-shadow: 0 6px 15px rgba(13, 27, 42, 0.3);
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* --- Validation and Errors (Colors remain standard red/green) --- */
+.invalid {
+  border-color: var(--error-color) !important;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1) !important;
+}
+
+.error-message {
+  position: absolute;
+  bottom: -1.2rem;
+  left: 0;
+}
+
+.error-message p {
+  color: var(--error-color);
+  font-size: 0.85rem;
+  margin: 0;
+  padding: 0;
+}
+
+.success-message {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  color: var(--success-color);
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  font-weight: 600;
+}

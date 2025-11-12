@@ -1,0 +1,78 @@
+/* Using Tailwind-like classes for a clean, minimal look */
+.banner-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  font-family: 'Inter', sans-serif;
+  max-width: 1200px;
+  margin: 2rem auto;
+  overflow: hidden; /* Important for the carousel */
+}
+
+/* Media query for larger screens (e.g., tablets and desktops) */
+@media (min-width: 768px) {
+  .banner-container {
+    grid-template-columns: 1.2fr 1fr; /* Two columns on desktop */
+  }
+}
+
+.tagline-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .tagline-container {
+    text-align: left;
+  }
+}
+
+.tagline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e3a8a; /* A dark blue for a professional feel */
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.sub-tagline {
+  font-size: 1.2rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire slide area */
+  border-radius: 0.75rem;
+}

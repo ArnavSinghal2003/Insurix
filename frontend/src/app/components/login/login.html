@@ -1,0 +1,41 @@
+<div class="login-container">
+  <div class="login-card">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+      
+      <!-- Email Field with Validation -->
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="text"
+          id="email"
+          class="form-input"
+          formControlName="email"
+          [class.invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+        />
+        <div class="error-message" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+          <p>Please enter a valid email.</p>
+        </div>
+      </div>
+
+      <!-- Password Field -->
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" class="form-input" formControlName="password" />
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="login-button">Login</button>
+
+      <!-- Footer Link -->
+      <div class="form-footer">
+        <a routerLink="/landing/signup" class="create-account-link">Create account</a>
+      </div>
+
+      <!-- Login Error Message -->
+      <div *ngIf="IsValid === false" class="error-message">
+        <p>Login Failed. Please check your email or password.</p>
+      </div>
+      
+    </form>
+  </div>
+</div>

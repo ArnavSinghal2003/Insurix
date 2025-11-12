@@ -1,0 +1,25 @@
+<div class="claim-card">
+  <div class="card-section">
+    <h3>Policy Details</h3>
+    <p><strong>Title:</strong> {{ request.policy?.title }}</p>
+    <p><strong>Category:</strong> {{ request.policy?.category }}</p>
+    <p><strong>Claim Amount:</strong> ₹{{ request.policy?.claimAmount }}</p>
+  </div>
+
+  <div class="card-section">
+    <h3>User Details</h3>
+    <p><strong>Name:</strong> {{ request.user?.name }}</p>
+    <p><strong>Email:</strong> {{ request.user?.email }}</p>
+  </div>
+
+  <div class="card-section">
+    <h3>Purchase Info</h3>
+    <p><strong>Claim Status:</strong> {{ request.purchase?.claimStatus }}</p>
+    <p><strong>Purchase Date:</strong> {{ request.purchase?.createdAt | date }}</p>
+  </div>
+
+  <div class="card-actions">
+    <button (click)="handleAction('Approved')">✅ Accept</button>
+    <button (click)="handleAction('Rejected')">❌ Reject</button>
+  </div>
+</div>

@@ -1,0 +1,162 @@
+/* To achieve an identical UI, all relevant CSS from the user's navbar.css 
+  must be copied here, including variables, base styles, and media queries.
+*/
+
+/* --- Global & Base Styles (MUST BE INCLUDED) --- */
+:root {
+  /* Define colors for easier management and consistency */
+  --primary-color: #0d1b2a; /* Dark Blue */
+  --accent-color: #1b2a41; /* Lighter Dark Blue */
+  --text-light: #fefae0;
+  --bg-light: #ffffff;
+  --border-light: rgba(40, 54, 24, 0.1);
+  --border-medium: rgba(40, 54, 24, 0.2);
+}
+
+/* --- Navbar Structure (Copied from user navbar.css) --- */
+.navbar {
+  /* Key styles for the 'different' look: sticky, blur, shadow */
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(40, 54, 24, 0.05);
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1030;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1rem;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Brand Logo (Copied from user navbar.css) --- */
+.navbar-brand {
+  color: var(--primary-color) !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+/* --- Main Navigation Links (Copied from user navbar.css) --- */
+.navbar-nav {
+  display: none; /* Hidden on mobile by default */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--primary-color) !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+.nav-link.active {
+  font-weight: 600;
+}
+
+/* Updated hover effect with a refined position */
+.nav-item {
+  position: relative;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-color);
+  height: 2px;
+  width: 0%;
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* --- User Actions & Profile (Copied from user navbar.css) --- */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-link {
+  color: var(--primary-color) !important;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* --- Buttons (Login/Logout) (Copied from user navbar.css) --- */
+.modern-search-btn {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(40, 54, 24, 0.2);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.modern-search-btn:hover {
+  background-color: rgba(40, 54, 24, 0.9);
+  border-color: rgba(40, 54, 24, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40, 54, 24, 0.3);
+}
+
+.modern-search-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(40, 54, 24, 0.2);
+}
+
+/* --- Media Queries for Desktop (MUST BE INCLUDED) --- */
+@media screen and (min-width: 992px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 10px var(--border-light);
+    background-color: var(--bg-light);
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-inner {
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  .navbar-nav {
+    display: flex; /* Display on desktop */
+    align-items: center;
+    gap: 1.5rem;
+    margin-right: auto; /* Pushes the actions to the right */
+  }
+
+  .nav-link {
+    padding: 1.2em 0;
+    font-weight: 500;
+  }
+}

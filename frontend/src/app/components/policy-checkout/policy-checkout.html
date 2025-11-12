@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<div class="checkout-page" *ngIf="!loading">
+  <div class="left-panel">
+    <app-policy-checkout-card
+      [policyName]="policy.title"
+      [policyDetails]="policy.description"
+      [claimAmount]="policy.claimAmount"
+      [monthlyPremium]="policy.monthlyPremium"
+      [imageUrl]="policy.image.url"
+    ></app-policy-checkout-card>
+  </div>
+
+  <div class="right-panel">
+    <form>
+      <h3>Enter Your Details</h3>
+
+      <input type="text" placeholder="Full Name" [(ngModel)]="formData.fullName" name="fullName" required />
+
+      <input type="email" placeholder="Email" [(ngModel)]="formData.email" name="email" required />
+      <div class="error-msg" *ngIf="isEmailInvalid()">
+        Please enter a valid email.
+      </div>
+
+      <input type="tel" placeholder="Phone" [(ngModel)]="formData.phone" name="phone" required />
+      <div class="error-msg" *ngIf="isPhoneInvalid()">
+        Please enter a valid phone number.
+      </div>
+
+      <input type="text" placeholder="Address" [(ngModel)]="formData.address" name="address" />
+      <div class="error-msg" *ngIf="isAddressInvalid()">
+        Please enter complete address.
+      </div>
+
+      <input type="date" placeholder="Date of Birth" [(ngModel)]="formData.dob" name="dob" />
+      <input type="text" placeholder="Nominee Name" [(ngModel)]="formData.nominee" name="nominee" />
+    </form>
+
+    <div class="checkout-button">
+      <button (click)="checkout()">Checkout</button>
+    </div>
+  </div>
+</div>

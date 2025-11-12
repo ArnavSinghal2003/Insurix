@@ -1,0 +1,55 @@
+<div class="page-container">
+  <div class="signup-container">
+    <div class="signup-card">
+      <h2 class="signup-header">Register Now</h2>
+
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="signup-form">
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" formControlName="email" name="email" class="form-input" required>
+          <div class="error-msg" *ngIf="f['email'].touched && f['email'].invalid">
+            Please enter a valid email.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" id="firstName" formControlName="firstName" name="firstName" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" id="lastName" formControlName="lastName" name="lastName" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" formControlName="password" name="password" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" id="confirmPassword" formControlName="confirmPassword" name="confirmPassword" class="form-input" required>
+          <div class="error-msg" *ngIf="f['confirmPassword'].touched && f['confirmPassword'].value !== f['password'].value">
+            Passwords do not match.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="role" class="form-label">Role</label>
+          <select id="role" formControlName="role" name="role" class="form-select" required>
+            <option value="">Select Role</option>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+
+        <button type="submit" class="signup-button">Sign Up</button>
+
+        <div class="form-footer">
+          <a routerLink="/landing/login" class="create-account-link">Already a user? Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

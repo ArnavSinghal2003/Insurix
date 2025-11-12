@@ -1,0 +1,27 @@
+<nav class="navbar" role="navigation" aria-label="Admin Primary">
+  <div class="nav-inner">
+    <a class="navbar-brand" routerLink="/adminHome" aria-label="Insurix Admin home">Insurix</a>
+
+    <ul class="navbar-nav" aria-label="Admin navigation">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/adminHome/processclaims" routerLinkActive="active">Process Claims</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/adminHome/managepolicies" routerLinkActive="active">Manage Policies</a>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <a *ngIf="fullName" class="nav-link profile-link" routerLink="/adminHome/profile">Hey, Admin</a>
+
+      <button
+        type="button"
+        class="modern-search-btn logout-btn"
+        (click)="logout()"
+        aria-label="Logout"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,11 @@
+<div class="policy-card-container" (click)="goToCheckout()" style="cursor: pointer;">
+  <img [src]="image.url" alt="{{title}}" class="policy-image" />
+
+  <div class="policy-content">
+    <h3 class="policy-title">{{ title }}</h3>
+    <p>{{ category }}</p>
+    <p class="policy-description">{{ description }}</p>
+    <p class="policy-meta">Claim Amount: ₹{{ claimAmount }}</p>
+    <p class="policy-meta">Monthly Premium: ₹{{ monthlyPremium }}</p>
+  </div>
+</div>

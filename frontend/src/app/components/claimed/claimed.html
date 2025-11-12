@@ -1,0 +1,16 @@
+<div class="claim-card">
+  <div class="claim-image">
+    <img [src]="policy.image" alt="Policy Image" />
+  </div>
+
+  <div class="claim-details">
+    <h3>{{ policy.title }}</h3>
+    <p>{{ policy.description }}</p>
+    <p><strong>Category:</strong> {{ policy.category }}</p>
+    <p><strong>Claim Amount:</strong> ₹{{ policy.claimAmount }}</p>
+    <p><strong>Monthly Premium:</strong> ₹{{ policy.monthlyPremium }}</p>
+    <p><strong>Claim Status:</strong> {{ claimStatus }}</p>
+    <p><strong>Requested At:</strong> {{ requestedAt | date:'mediumDate' }}</p>
+    <p><strong>Note:</strong> {{ note || 'No note provided' }}</p>
+  </div>
+</div>

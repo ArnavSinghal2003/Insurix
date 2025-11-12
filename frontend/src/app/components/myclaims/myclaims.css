@@ -1,0 +1,24 @@
+.claims-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ✅ 2 cards per row */
+  gap: 2rem; /* ✅ spacing between cards */
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+
+.claims-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.no-claims-text {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-medium);
+  margin-top: 2rem;
+}

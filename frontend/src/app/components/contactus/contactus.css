@@ -1,0 +1,117 @@
+/* Minimal, modern, black-on-white with no horizontal overflow */
+
+.page {
+  /* Theme */
+  /* --bg: #ffffff; */
+  --fg: #111111;
+  --muted: #6b7280; /* gray-500 */
+  --border: #e5e7eb; /* gray-200 */
+  --radius: 10px;
+  margin-top: 30px;
+
+
+  /* Spacing */
+  --s2: 0.5rem;
+  --s3: 0.75rem;
+  --s4: 1rem;
+  --s5: 1.25rem;
+  --s6: 1.5rem;
+  --s8: 2rem;
+  --s10: 2.5rem;
+
+  color: var(--fg);
+  background: var(--bg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+    "Segoe UI Emoji";
+  line-height: 1.6;
+
+  /* Layout and overflow safety */
+  padding: clamp(var(--s6), 4vw, var(--s10));
+  max-width: 920px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.header {
+  margin-bottom: var(--s8);
+}
+
+.title {
+  margin: 0 0 var(--s2);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+.section {
+  margin-bottom: var(--s8);
+}
+
+.grid {
+  display: grid;
+  gap: var(--s4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--s5);
+  background: #fff;
+}
+
+.label {
+  margin: 0 0 var(--s2);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: 1rem;
+}
+
+.muted {
+  color: var(--muted);
+  margin: var(--s2) 0 0;
+  font-size: 0.95rem;
+}
+
+.link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.address {
+  margin: 0;
+  font-style: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Extra safety for long content */
+p,
+h1,
+h2,
+address,
+a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}

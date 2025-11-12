@@ -1,0 +1,82 @@
+/* --- Global & Base Styles (Original Color Theme) --- */
+:root {
+  /* Original Color Theme */
+  --primary-color: #0d1b2a; /* Dark Blue */
+  --accent-color: #1b2a41; /* Slightly lighter Dark Blue for hover/action */
+  --text-dark: #333333;
+  --bg-light: #ffffff;
+  --bg-page: #f8f9fa; /* Soft background page color */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --shadow-light: 0 4px 12px rgba(40, 54, 24, 0.05); /* Subtle shadow from original navbar */
+}
+
+/* 1. Page Layout and Centering (Structure remains) */
+.admin-landing-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  min-height: calc(100vh - 80px); 
+  padding-top: 0; 
+  background-color: var(--bg-page); 
+  width: 100%; 
+}
+
+/* --- Image Banner Styles (Structure remains, only shadow color adjusted) --- */
+.insurance-banner {
+  width: 100%;
+  max-height: 250px; 
+  overflow: hidden;
+  margin-bottom: 3rem; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.insurance-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+/* 2. Welcome Card/Box Style (Structure remains) */
+.welcome-card {
+  text-align: center;
+  max-width: 700px;
+  padding: 3.5rem 3rem;
+  margin: 0 2rem 4rem 2rem;
+  background-color: var(--bg-light);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.welcome-card:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* 3. Typography and Headings (Color reverted) */
+.welcome-heading {
+  font-family: var(--font-family);
+  color: var(--primary-color); /* Dark Blue */
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.welcome-subtitle {
+  font-family: var(--font-family);
+  color: #6c757d;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+}
+
+.action-prompt {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}

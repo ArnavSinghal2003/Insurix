@@ -1,0 +1,135 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+}
+
+.error-msg {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  /* padding: 10px; */
+  box-sizing: border-box;
+  gap: 0;
+}
+
+.signup-card {
+  background: var(--bg-light);
+  border-radius: var(--radius-medium);
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: var(--shadow-subtle);
+  transition: box-shadow 0.3s ease;
+}
+
+.signup-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.signup-header {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 0 0;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.form-input,
+.form-select {
+  font-family: var(--font-family);
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-small);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+  background: #fcfcfc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(13, 27, 42, 0.1);
+}
+
+.form-select {
+  cursor: pointer;
+}
+
+.signup-button {
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: var(--radius-small);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+  align-self: center;
+  width: 100%;
+}
+
+.signup-button:hover {
+  background: var(--text-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-subtle);
+}
+
+.form-footer {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.create-account-link {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.create-account-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,101 @@
+/* --- Container stays clean and centered --- */
+.category-container {
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  min-height: 100vh;
+  cursor: pointer;
+}
+
+/* --- Header section --- */
+.category-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category-title {
+  color: var(--primary-color);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.category-subheading {
+  color: var(--text-medium);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Card Grid Layout --- */
+.policy-card-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ Center align cards */
+  justify-content: center;
+  gap: 4rem; /* ✅ Visible vertical gap */
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+}
+
+/* --- Individual Card Styling --- */
+app-policy-card {
+  display: block;
+  background-color: var(--bg-card, #fff);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 60%; /* ✅ Balanced width */
+  min-height: 280px; /* ✅ Compact height */
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* ✅ subtle shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* --- Hover effect --- */
+app-policy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); /* ✅ subtle lift */
+}
+
+/* --- Typography inside cards --- */
+app-policy-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+app-policy-card p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-dark);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+app-policy-card .premium,
+app-policy-card .claim {
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+/* --- Responsive tweaks --- */
+@media screen and (max-width: 768px) {
+  app-policy-card {
+    width: 90%;
+    min-height: auto;
+    padding: 1.25rem;
+  }
+
+  .policy-card-grid {
+    gap: 3rem;
+  }
+}

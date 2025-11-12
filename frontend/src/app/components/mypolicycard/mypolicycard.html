@@ -1,0 +1,15 @@
+<div class="policy-card-container">
+  <img [src]="policy.image.url" alt="{{ policy.title }}" class="policy-image" />
+
+  <div class="policy-content">
+    <h3>{{ policy.title }}</h3>
+    <p>{{ policy.description }}</p>
+    <p><strong>Claim Amount:</strong> ₹{{ policy.claimAmount }}</p>
+    <p><strong>Monthly Premium:</strong> ₹{{ policy.monthlyPremium }}</p>
+    <p><strong>Claim Status:</strong> {{ claimStatus }}</p>
+
+    <button *ngIf="claimStatus === 'Not Initiated'" (click)="requestClaim()">
+      Request Claim
+    </button>
+  </div>
+</div>

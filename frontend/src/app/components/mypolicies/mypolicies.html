@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+
+<div class="my-policies-container" *ngIf="!loading">
+  <h2>My Purchased Policies</h2>
+
+  <div *ngFor="let purchase of purchases" class="point">
+    <app-my-policy-card
+      [policy]="purchase.policy"
+      [claimStatus]="purchase.claimStatus"
+      [purchaseId]="purchase._id"
+      (claimRequested)="handleClaimRequest($event)"
+    ></app-my-policy-card>
+  </div>
+</div>

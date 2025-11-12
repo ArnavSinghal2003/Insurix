@@ -1,0 +1,37 @@
+<nav class="navbar" role="navigation" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="navbar-brand" routerLink="/" aria-label="Insurix home">Insurix</a>
+
+    <ul class="navbar-nav" aria-label="Main navigation">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/myPolicies" routerLinkActive="active">My Policies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/myclaims" routerLinkActive="active">My Claims</a>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <ng-container *ngIf="fullName; else loggedOut">
+        <a class="nav-link profile-link" routerLink="/profile">Hey, {{ fullName }}</a>
+        <button
+          type="button"
+          class="modern-search-btn logout-btn"
+          (click)="logout()"
+          aria-label="Logout"
+        >
+          Logout
+        </button>
+      </ng-container>
+      <ng-template #loggedOut>
+        <a
+          class="modern-search-btn login-btn"
+          routerLink="/landing/login"
+          aria-label="Login"
+        >
+          Login
+        </a>
+      </ng-template>
+    </div>
+  </div>
+</nav>
